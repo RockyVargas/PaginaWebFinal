@@ -1,0 +1,478 @@
+/*GENERAL*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    margin: 20px 20px 20px 20px;
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Esto centrará todos los elementos del cuerpo en el eje horizontal */
+}
+/*MENU*/
+a{
+    text-decoration: none;
+}
+.menu_items{
+    list-style: none;
+}
+.menu
+{
+    max-width: 950px;
+    width: 100%;
+    position: relative; /*----*/
+    margin-top: 40px;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+.menu_items{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Nueva propiedad */
+}
+.menu_item-link{
+    position: relative;
+    display: block;
+    padding: 20px 29.9px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 18.5px;
+    text-transform: uppercase;
+    transition: all 0.3s linear;   
+}
+.menu_item-link:hover{
+    background-color: #00ffff;
+    border-radius: 10px;
+}
+.menu_item-link:before{
+    content: '';
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    box-shadow: 0px 0px 30px 10px #00ffff;
+    opacity: 0;
+    transition: all 0.2s -0.1s linear;
+}
+.menu_item-link:hover::before{
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+.menu_item:last-child
+.menu_item-link
+{
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+/*BarraBusqueda*/
+.search {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: -25px;
+    position: relative;
+    width: 500px;
+    height: 70px;
+  }
+
+.search_btn{
+    position: absolute;
+    right: 8px;
+    top: 35%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #6d6d6d;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px #6d6d6d;
+    transition: all 0.3s linear;
+    box-shadow: 0,3s linear;
+}
+.search_btn:hover{
+    background-color: #ff008b;
+    box-shadow: 0 0 20px #ff008b;
+}
+.search_btn-img{
+    display: block;
+    width: 30px;
+}
+.search_input{
+    padding: 10px 60px 10px 20px;
+    border: 4px solid #6d6d6d;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 100px;
+    font-size: 18px;
+    outline: none;
+    transition: 0.4s;
+    box-shadow: 0.4s;
+}
+.search_input:focus{
+    border-color: #ff008b;
+    box-shadow: 0 0 50px #ff008b;
+}
+.search_input:hover{
+    border-color: #ff008b;
+    box-shadow: 0 0 50px #ff008b;
+}
+
+/*CatalogoPRINCIPAL*/
+.producto {
+    height: auto;
+    border: 4px solid #000;
+    background-color: #4d4d4d;
+    margin: 10px;
+    padding: 5px;  
+    flex: 0 0 calc(25% - 20px); /* Modificado para ocupar el 25% del ancho del contenedor */
+    min-width: 210px; /* Ajusta este valor según lo necesites */
+    max-width: 210px;
+    min-height: 400px;
+    max-height: 400px;
+    box-sizing: border-box;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.producto img {
+    height: 68%;
+    width: 68%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: flex-start; /* Alinea la imagen al inicio del contenedor */
+}
+
+
+
+
+.producto p {
+    height: auto;
+    width: auto;
+    font-size: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    overflow: auto;
+    border: solid 1px red;
+    background-color: wheat;
+    
+}
+
+.producto h2{
+    margin-top: 5px;
+    font-size: 20px;
+}
+.producto button {
+    height: 20%;
+    width: 80%;
+    padding:10px;
+    border: 4px solid #ff008b;
+    background-color: #ff008b;
+    border-radius: 100px;
+    outline: none;
+    transition: 0.4s;
+    box-shadow: 0.4s;
+    cursor: pointer;
+    display: block; /* Esto hará que el botón se comporte como un bloque */
+    margin: auto; /* Esto centrará el botón */
+    margin-top: 5px; /* Esto agregará un espacio entre el botón y el texto del producto */
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.producto button:hover {
+    border-color: #65b9b5;
+    box-shadow: 0 0 8px #65b9b5;
+    color: white;
+}
+
+.cudrito{
+    position: relative;
+    margin-top: 15px;
+    background-color: #121212;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    max-width: none;
+    width: 100%; /* Modificado para ocupar el 100% del ancho del contenedor */
+    height: 100%; /* Ajusta la altura según lo necesites */
+    max-width: 1020px;
+}
+
+.producto:hover {
+    border-radius: 15px;
+    border-color: #ff008b;
+    box-shadow: 0 0 25px #ff008b;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/*Iniciodesesion*/
+.iniciosesion img {
+    width: 50px; /* Ajusta el ancho de la imagen */
+    height: 50px; /* Ajusta la altura de la imagen */
+    position: absolute; /* Posiciona la imagen de forma absoluta */
+    top: 10px; /* Ajusta la posición desde la parte superior */
+    right: 10px; /* Ajusta la posición desde la derecha */
+}
+
+.iniciosesion img:hover {
+    filter: drop-shadow(0 0 5px #00ff00) /* Ajusta el color según tus necesidades */
+           drop-shadow(0 0 10px #00ff00)
+           drop-shadow(0 0 15px #00ff00)
+           drop-shadow(0 0 20px #00ff00);
+}
+
+
+/*MENUBOTONINICOSOLO*/
+a {
+    text-decoration: none;
+}
+
+.menu_itemsx {
+    list-style: none;
+}
+
+.menux {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: -25px;
+    position: relative;
+    width: 17%;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 17.5%;
+    height: 17.5%;
+    border-radius: 10px;
+    margin-top: -0px;
+    margin-right: 25px; /* Aumenta el margen a la derecha para separar el botón de la barra de búsqueda */
+    margin-left: 25px;
+}
+
+.menu_itemsx {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu_item-linkx {
+    position: relative;
+    display: flex; /* Añade flex para poder centrar el texto */
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    padding: 20px 29.9px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 18.5px;
+    text-transform: uppercase;
+    transition: all 0.3s linear;   
+}
+
+.menu_item-linkx:hover {
+    background-color: red;
+    border-radius: 10px;
+    padding: 20px 29.9px; /* Asegúrate de que este valor sea el mismo que en el estado normal */
+}
+
+
+.menu_item-linkx:before {
+    content: '';
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px 10px red; /* Reduce el valor de 30px a 20px */
+    opacity: 0;
+    transition: all 0.2s -0.1s linear;
+}
+
+.menu_item-linkx:hover::before {
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+
+.menu_itemx:last-child .menu_item-linkx {
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+.mira {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+}
+
+  
+/*tamaños*/
+  @media (max-width: 600px) {
+    .mira {
+      flex-direction: column;
+    }
+  
+    .menux {
+      margin-right: 0;
+      margin-bottom: 0px;
+      width: 37%; /* Ajusta el ancho al 100% para que ocupe todo el espacio disponible */
+    }
+  
+    .search {
+      width: 100%; /* Ajusta el ancho al 100% para que ocupe todo el espacio disponible */
+    }
+  
+    /* Ajusta el tamaño y la disposición de los productos para pantallas pequeñas */
+    .producto {
+      flex: 0 0 calc(50% - 20px); /* Ocupa el 50% del ancho del contenedor */
+      min-width: 200px; /* Ajusta este valor según lo necesites */
+      max-width: 200px;
+    }
+  }
+
+  
+/*FLECHA IZQ*/
+.left_btn{
+    margin-top: 10px;
+    background-color: #1c1c1c; /* Color del fondo de la página */
+    border-radius: 50%; /* Hace que el botón sea circular */
+    margin-right: 10px;
+}
+
+.left_btn:hover{
+    background-color: #65b9b5;
+    box-shadow: 0 0 10px #ff008b; /* Crea un brillo alrededor del botón al pasar el ratón */
+}
+
+.left_btn-img{
+    display: block;
+    width: 35px;
+    height: 30px;
+    margin: 5px auto; /* Centra la imagen en el botón */
+}
+
+/*FLECHA DERECH*/
+.right_btn{
+    background-color: #1c1c1c; /* Color del fondo de la página */
+    border-radius: 50%; /* Hace que el botón sea circular */
+    margin-left: 10px;
+}
+
+.right_btn:hover{
+    background-color: #65b9b5;
+    box-shadow: 0 0 10px #ff008b; /* Crea un brillo alrededor del botón al pasar el ratón */
+}
+
+.right_btn-img{
+    display: block;
+    width: 35px;
+    height: 30px;
+    margin: 5px auto; /* Centra la imagen en el botón */
+}
+
+/*Titulo*/ 
+.parte1 {
+    /* Tus estilos actuales para "Minimarket" */
+    font-size: 300%; /* Ajusta este valor para cambiar el tamaño de la fuente */
+    color: #fff;
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #ff008b,
+      0 0 80px #ff008b,
+      0 0 90px #ff008b,
+      0 0 10px #ff008b,
+      0 0 10px #ff008b;
+}
+
+
+  .espacio {
+    margin-left: 10px; /* Ajusta este valor para cambiar el tamaño del espacio */
+    margin-right: 10px; /* Ajusta este valor para cambiar el tamaño del espacio */
+  }
+
+  .parte2 {
+   /* Tus estilos actuales para "Minimarket" */
+   font-size: 300%; /* Ajusta este valor para cambiar el tamaño de la fuente */
+   color: #fff;
+   text-shadow:
+     0 0 4px #fff,
+     0 0 11px #fff,
+     0 0 19px #fff,
+     0 0 40px #00ffff,
+     0 0 80px #00ffff,
+     0 0 90px #00ffff,
+     0 0 10px #00ffff,
+     0 0 10px #00ffff;
+ }
+
+ @keyframes flicker1 {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #ff008b,
+        0 0 80px #ff008b,
+        0 0 90px #ff008b,
+        0 0 10px #ff008b,
+        0 0 10px #ff008b;
+    }
+    20%, 24%, 55% {
+      text-shadow:
+        0 0 2px #fff,
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #ff008b,
+        0 0 40px #ff008b,
+        0 0 45px #ff008b,
+        0 0 5px #ff008b,
+        0 0 5px #ff008b;
+    }
+  }
+ 
+  @keyframes flicker2 {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #00ffff,
+        0 0 80px #00ffff,
+        0 0 90px #00ffff,
+        0 0 10px #00ffff,
+        0 0 10px #00ffff;
+    }
+    20%, 24%, 55% {
+      text-shadow:
+        0 0 2px #fff,
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff,
+        0 0 45px #00ffff,
+        0 0 5px #00ffff,
+        0 0 5px #00ffff;
+  }
+  
+}
